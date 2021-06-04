@@ -43,7 +43,7 @@
                         </div>
                         <div class="ds_layout__content">
                             <div id="passenger-table" aria-hidden="false"></div>
-                            <div id="airline-details" class="fully-hidden">
+                            <div id="airline-details" class="fully-hidden" aria-hidden="true">
                                 <p class="ds_leader"></p>
                                 <p>
                                     <img alt="An image displaying the logo of the airline" onerror="this.onerror=null;this.src='../src/resources/assets/images/plane.jpg'"></img>
@@ -52,7 +52,7 @@
                                 <p class="headquarters"></p>
                                 <p class="year"></p>
                             </div>
-                            <div id="form-container" class="ds_layout__form-content form-box fully-hidden">
+                            <div id="form-container" class="ds_layout__form-content form-box fully-hidden" aria-hidden="true">
                                 <form>
                                     <h2>Passenger Details:</h2>
                                     <div class="ds_question">
@@ -67,13 +67,18 @@
                                             <input id="trips" type="number"></input>
                                         </div>
                                     </div>
-
+                                    <div class="ds_question">
+                                        <label class="ds_label" for="airline">Airline</label>
+                                        <div>
+                                            <select id="airline"></select>
+                                        </div>
+                                    </div>
                                     <div class="button-group">
                                         <button id="passenger-edit-confirm" type="submit" class="ds_button ds_no-margin">Submit</button>
-                                        <button id="passenger-edit-cancel" type="button" class="ds_button ds_no-margin ds_button--secondary">Cancel</a>    
+                                        <button id="passenger-edit-cancel" type="button" class="ds_button ds_no-margin ds_button--secondary">Cancel</button>    
                                     </div>
                                 </form>
-                                <nav id="page-nav" class="fully-hidden">
+                                <nav id="page-nav" class="fully-hidden" aria-hidden="true">
                                     <p>Passenger details updated successfully</p>
                                     <button id="back-to-list" type="button" class="ds_button  ds_button--secondary">Back to list</a>
                                 </nav>

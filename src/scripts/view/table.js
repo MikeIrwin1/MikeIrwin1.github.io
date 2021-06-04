@@ -5,7 +5,7 @@ const TableView = function (container) {
 }
 
 TableView.prototype.bindEvents = function () {
-  PubSub.subscribe('Passengers:data-loaded', (event) => {
+  PubSub.subscribe('Passengers:passenger-data-loaded', (event) => {
     const data = event.detail.data;
     this.render(data);
   })

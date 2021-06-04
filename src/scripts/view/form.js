@@ -4,6 +4,7 @@ import ContainerView from '../view/container.js';
 const FormView = function (element) {
     this.element = element;
     this.passenger;
+    this.airline;
 }
 
 FormView.prototype.bindEvents = function () {
@@ -13,6 +14,9 @@ FormView.prototype.bindEvents = function () {
         this.setFields(event.detail);
         ContainerView.showForm();
         // history.pushState(null, null, `/passenger/${this.passenger._id}/edit/`);
+    })
+    pubsub.subscribe('Passengers:airlines-data-loaded', (event) => {
+        this.setAirlineDropdown(event.detail);
     })
 }
 
@@ -53,15 +57,33 @@ FormView.prototype.handleFormSubmit = function (form) {
         id: this.passenger._id,
         name: form.name.value,
         trips: form.trips.value,
+        airline:form.airline.value
     }    
-    
-    if (this.passenger.airline.id) {
-        editedPassenger.airline = this.passenger.airline.id; 
-    } else {
-        editedPassenger.airline = this.passenger.airline[0].id; 
-    }
 
     return editedPassenger;
+}
+
+FormView.prototype.setAirlineDropdown = function(airlines){
+    const select = document.querySelector('#airline');
+    const passengerDefault = this.getAirlineID();
+    
+    airlines.forEach( (airline, index) => {
+        const option = document.createElement('option');
+        option.textContent = airline.name;
+        option.value = airline.id;
+        if (airline.id === passengerDefault) {
+            option.setAttribute('selected', airline.id);
+        }
+        select.appendChild(option);
+    })
+}
+
+FormView.prototype.getAirlineID = function () {
+    if (this.passenger.airline.id) {
+        return this.passenger.airline.id; 
+    } else {
+        return this.passenger.airline[0].id; 
+    }
 }
 
 export default FormView;
