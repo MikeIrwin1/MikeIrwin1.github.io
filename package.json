@@ -1,0 +1,22 @@
+{
+  "name": "fed-test-airline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npm run node_modules/.bin/node-sass ./src/scss/main.scss ./dist/css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@scottish-government/pattern-library": "0.0.180",
+    "node-sass": "^6.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
+  }
+}

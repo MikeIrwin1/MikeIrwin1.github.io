@@ -1,0 +1,13 @@
+$ds_colour__brand: #ff1493;
+$ds_colour__button--secondary: #ff1493;
+$button__height--small: 32px;
+
+@import "../../node_modules/@scottish-government/pattern-library/src/base/all-base";
+@import "../../node_modules/@scottish-government/pattern-library/src/forms/all-forms";
+@import "../../node_modules/@scottish-government/pattern-library/src/components/table/table";
+@import "../../node_modules/@scottish-government/pattern-library/src/components/page-header/page-header";
+@import "../../node_modules/@scottish-government/pattern-library/src/components/site-header/site-header";
+@import "../../node_modules/@scottish-government/pattern-library/src/components/site-footer/site-footer";
+@import "../../node_modules/@scottish-government/pattern-library/src/components/metadata/metadata";
+@import "../../node_modules/@scottish-government/pattern-library/src/components/breadcrumbs/breadcrumbs";
+@import "./form-box.scss";

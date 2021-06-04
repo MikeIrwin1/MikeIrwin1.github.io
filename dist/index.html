@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="./css/main.css" rel="stylesheet">
+        <script type="module" src="./scripts/bundle.js"></script>
+        <title>Flight details</title>
+    </head>
+    <body>
+        <div class="ds_page">
+            <div class="ds_page__top">
+                <header class="ds_site-header" role="banner">
+
+                    <div class="ds_wrapper">
+                        <div class="ds_site-header__content">
+                            <div class="ds_site-branding">
+                                <div class="ds_site-branding__title">
+                                    <a class="ds_site-branding__link" href="/dist/index.html">Flight Information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </header>
+            </div>
+
+            <div class="ds_page__middle">
+                <!--
+                    Main content
+                -->
+                <div class="ds_wrapper">
+                    <main id="main-content" class="ds_layout ds_layout--article">
+                        <div class="ds_layout__header">
+                            <header class="ds_page-header">
+                                <h1 class="ds_page-header__title">Passenger list</h1>
+                                <dl class="ds_page-header__metadata  ds_metadata fully-hidden">
+                                    <div class="ds_metadata__item">
+                                        <dt class="ds_metadata__key">Web</dt>
+                                        <dd class="ds_metadata__value"><a target="_blank"></a></dd>
+                                    </div>
+                            </dl>
+                            </header>
+                        </div>
+                        <div class="ds_layout__content">
+                            <div id="passenger-table" aria-hidden="false"></div>
+                            <div id="airline-details" class="fully-hidden">
+                                <p class="ds_leader"></p>
+                                <p>
+                                    <img alt="An image displaying the logo of the airline" onerror="this.onerror=null;this.src='../src/resources/assets/images/plane.jpg'"></img>
+                                </p>
+                                <p class="country"></p>
+                                <p class="headquarters"></p>
+                                <p class="year"></p>
+                            </div>
+                            <div id="form-container" class="ds_layout__form-content form-box fully-hidden">
+                                <form>
+                                    <h2>Passenger Details:</h2>
+                                    <div class="ds_question">
+                                        <label class="ds_label" for="name">Name</label>
+                                        <div>
+                                            <input id="name" type="text"></input>
+                                        </div>
+                                    </div>
+                                    <div class="ds_question">
+                                        <label class="ds_label" for="trips">Trips</label>
+                                        <div>
+                                            <input id="trips" type="number"></input>
+                                        </div>
+                                    </div>
+
+                                    <div class="button-group">
+                                        <button id="passenger-edit-confirm" type="submit" class="ds_button ds_no-margin">Submit</button>
+                                        <button id="passenger-edit-cancel" type="button" class="ds_button ds_no-margin ds_button--secondary">Cancel</a>    
+                                    </div>
+                                </form>
+                                <nav id="page-nav" class="fully-hidden">
+                                    <p>Passenger details updated successfully</p>
+                                    <button id="back-to-list" type="button" class="ds_button  ds_button--secondary">Back to list</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </main>
+                    
+                </div>
+                
+            </div>
+
+            <div class="ds_page__bottom">
+                <!--
+                    Footer
+                    Scripts
+                -->
+                <footer class="ds_site-footer ds_reversed">
+                    <div class="ds_wrapper">
+                        <div class="ds_site-footer__content">
+                            <ul class="ds_site-footer__site-items">
+                                <li class="ds_site-items__item">
+                                    <a href="#!/footer/footer-item-1">Footer Item 1</a>
+                                </li>
+                                <li class="ds_site-items__item">
+                                    <a href="#!/footer/footer-item-2">Footer Item 2</a>
+                                </li>
+                                <li class="ds_site-items__item">
+                                    <a href="#!/footer/footer-item-3">Footer Item 3</a>
+                                </li>
+                            </ul>
+                            <div class="ds_site-footer__copyright">
+                                <p>Some copyright notice text</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
